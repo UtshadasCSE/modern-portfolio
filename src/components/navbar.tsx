@@ -29,6 +29,7 @@ export default function Navbar() {
         >
           <HStack gap={4} px={{ base: 3, md: 0 }}>
             <Avatar size={'sm'} name={siteConfig.profile.name} src={siteConfig.profile.avatar} />
+
             <Button
               variant={'outline'}
               padding={2}
