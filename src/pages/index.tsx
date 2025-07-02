@@ -48,6 +48,8 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill } from 'react-icons/ri'
 import { SiExpress, SiMui, SiPrisma } from 'react-icons/si'
+import { PiCertificateBold } from 'react-icons/pi'
+
 import Link from 'next/link'
 
 export default function Home() {
@@ -151,14 +153,12 @@ const About = () => {
             </Text>
           </Flex>
         </Flex>
-        <Button borderRadius={'md'}>
-          <Link href={'https://www.linkedin.com/in/utshakumardas-csebd25'} target="_blank">
-            <Flex gap={1} alignItems={'center'} color={'brand'}>
-              <IoMdCheckmarkCircleOutline />
-              Hire me
-            </Flex>
-          </Link>
-        </Button>
+        <CNLink href="https://www.linkedin.com/in/utshakumardas-csebd25" w={'100%'}>
+          <Button borderRadius={'md'} w={'100%'}>
+            <IoMdCheckmarkCircleOutline />
+            Hire me
+          </Button>
+        </CNLink>
       </Flex>
     </Stack>
   )
@@ -309,7 +309,7 @@ const Work = () => {
                 </Heading>
                 <HStack borderWidth={'1px'} p={2} borderRadius={'lg'} borderColor={'gray.subtel'}>
                   <FaRegCalendarDays size={14} />
-                  <Text fontSize={'9px'} color={'brand'}>
+                  <Text fontSize={'10px'} color={'brand'}>
                     {work.fromDate} - {work.toDate}
                   </Text>
                 </HStack>
@@ -355,13 +355,16 @@ const EducationHistory = () => {
               </Heading>
               <HStack borderWidth={'1px'} p={2} borderRadius={'lg'} borderColor={'gray.subtel'}>
                 <FaRegCalendarDays size={14} />
-                <Text fontSize={'9px'} color={'brand'}>
+                <Text fontSize={'10px'} color={'brand'}>
                   {edu.fromDate} - {edu.toDate}
                 </Text>
               </HStack>
             </Flex>
             <Text fontSize={'sm'} color={'brand.secondary'} ml={4}>
-              <li> {edu.degree}</li>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <PiCertificateBold />
+                {edu.degree}
+              </span>
             </Text>
           </Stack>
         ))}
