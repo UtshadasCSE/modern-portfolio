@@ -50,8 +50,6 @@ import { RiNextjsFill } from 'react-icons/ri'
 import { SiExpress, SiMui, SiPrisma } from 'react-icons/si'
 import { PiCertificateBold } from 'react-icons/pi'
 
-import Link from 'next/link'
-
 export default function Home() {
   return (
     <>
