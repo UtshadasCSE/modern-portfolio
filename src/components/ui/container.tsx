@@ -1,9 +1,9 @@
-import { Container, ContainerProps } from "@chakra-ui/react";
+import { Container, ContainerProps } from '@chakra-ui/react'
 
-export default function MyContainer({ children, ...props }: ContainerProps) {
+export const MyContainer = ({ children, ...props }: ContainerProps) => {
   return (
-    <Container {...props} maxW={"5xl"} px={{ base: 4, md: 8 }} mx={"auto"}>
+    <Container px={{ base: 2, md: 4 }} maxW={'5xl'} mx={'auto'} {...props}>
       {children}
     </Container>
-  );
+  )
 }
